@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+
+# Crear una figura
+fig, ax = plt.subplots(figsize=(6,4))
+
+# Datos ficticios de impuestos
+categorias = ['Impuesto Renta', 'IVA', 'Retenciones', 'Otros']
+valores = [40, 25, 20, 15]
+
+# Crear gráfico circular
+ax.pie(valores, labels=categorias, autopct='%1.1f%%', startangle=90)
+ax.set_title("Distribución de Impuestos", fontsize=14, fontweight='bold')
+
+# Guardar la imagen
+plt.savefig("finanzas_impuestos.png", dpi=150, bbox_inches="tight")
+plt.close()
+
+print("Imagen generada: finanzas_impuestos.png")
